@@ -17,6 +17,8 @@ RUN locale-gen fr_FR ISO-8859-1
 RUN locale-gen fr_FR.UTF-8
 RUN locale-gen en_US.UTF-8
 
+RUN chmod 777 /var/run/apache2
+
 #Config Apache
 RUN a2enmod rewrite
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
